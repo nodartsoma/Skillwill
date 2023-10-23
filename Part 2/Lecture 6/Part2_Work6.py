@@ -1,7 +1,7 @@
 class Person:
     def __init__(self):
         self.heart = Heart(90)
-        self.brain = Brain(80)
+        self.brain = Brain(60)
 
 
 class Heart:
