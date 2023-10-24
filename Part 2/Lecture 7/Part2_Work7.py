@@ -32,5 +32,3 @@ class SportCar(Car):
         print(super().stop_engine())
         Car().current_speed = 0
 
-
-SportCar().start_engine()
