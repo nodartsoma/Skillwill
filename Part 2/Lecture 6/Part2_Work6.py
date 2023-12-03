@@ -1,11 +1,11 @@
 class Person:
     def __init__(self):
-        self.heart = Heart(90)
-        self.brain = Brain(60)
+        self.heart = Heart()
+        self.brain = Brain()
 
 
 class Heart:
-    def __init__(self, usage):
+    def __init__(self, usage=90):
         self.usage = usage
 
     @property
@@ -16,7 +16,7 @@ class Heart:
 
 
 class Brain:
-    def __init__(self, usage):
+    def __init__(self, usage=60):
         self.usage = usage
 
     @property
@@ -41,3 +41,4 @@ class Leg:
 
 person = Person()
 person.leg = Leg(11)
+print(person.heart.state)

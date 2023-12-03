@@ -1,5 +1,7 @@
 
 class Car:
+    champion = 1990
+
     def __init__(self, brand, model, production_year, color, horse_power, is_sport_car=False):
         self.__brand = brand
         self.__model = model
@@ -25,30 +27,33 @@ class Car:
         return self.__color
 
     @color.setter
-    def change_color(self, new_color):
+    def color(self, new_color):
         if not isinstance(new_color, str):
-            return "Please, insert string"
+            print("Please, insert string")
         elif new_color != Car.color:
             self.__color = new_color
-            return True
-        else:
-            return False
 
     @property
     def horse_power(self):
         return self.__horse_power
 
     @horse_power.setter
-    def increase_horse_power(self, hp):
+    def horse_power(self, hp):
         if not isinstance(hp, int):
-            return "Please, insert integer"
+            print("Please, insert integer")
         elif hp > 0:
             self.__horse_power += hp
-            return True
-        else:
-            return False
 
     @property
     def is_sport_car(self):
         return self.__is_sport_car
+
+    def show(self):
+        print(f"name: {self.model}")
+
+
+
+
+car = Car("BMW", "M4", 2010, "Black", 200, True)
+
 

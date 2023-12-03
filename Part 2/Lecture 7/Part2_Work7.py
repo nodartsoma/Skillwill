@@ -30,5 +30,6 @@ class SportCar(Car):
 
     def stop_engine(self):
         print(super().stop_engine())
-        Car().current_speed = 0
+        self.current_speed = 5
+        print(self.current_speed)
 
