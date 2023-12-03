@@ -1,3 +1,8 @@
+from django.http import HttpResponse
 from django.shortcuts import render
 
-# Create your views here.
+import MyCalendar.Calendar.models
+
+
+def calendar_index():
+    return HttpResponse(MyCalendar.Calendar.models.CalendarClass)
